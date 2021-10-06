@@ -2,3 +2,129 @@ body {
 	background: url(../img/12_col.gif) center top repeat-y;
 	background-size: 90%;
 }
+body {
+    background: url(../img/12_col.gif) center top repeat-y;
+    background-size: 90%;
+}
+
+[class*="container"] {
+    height: 700px;
+    width: auto;
+    margin: 15px 100px 15px;
+    display: grid;
+}
+
+.container1 {
+    
+    grid-template-columns: repeat(12, 1fr); /* amount of repitions, size */
+    grid-template-rows: auto; /* default value */
+    
+    /* column-gap: 10px;
+    row-gap: 10px; */
+
+    gap: 15px 15px;
+
+    /* justify-items: center;
+    align-items: center; */
+
+    /* shorthand */
+
+    place-items: stretch stretch; /* align justify */
+
+    /* Needs available space to move around fr takes up available space. */
+    /* Positions column-wise */
+
+    justify-content: space-between;
+    align-content: space-evenly;
+    /* short hand */
+    place-content : stretch stretch;
+}
+
+.header {
+    grid-column-start: 1;
+    grid-column-end: span 12;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border: 1px solid #333;
+}
+
+.box1 {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border: 1px solid #333;
+}
+
+.box2 {
+    grid-column-start: 3;
+    grid-column-end: span 8;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border: 1px solid #333;
+}
+
+.box3 {
+    grid-column-start: 11;
+    grid-column-end: span 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border: 1px solid #333;
+}
+
+.main {
+    grid-column-start: 1;
+    grid-column-end: span 9;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border: 1px solid #333;
+}
+
+.aside {
+    grid-column-start: 10;
+    grid-column-end: span 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border: 1px solid #333;
+}
+
+.container2 {
+    height: 250px;
+    width: auto;
+    margin: 0px 100px 0px;
+    border: 1px solid #333;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* amount of repitions, size */
+    grid-template-rows: auto; /* default value */
+    
+    /* column-gap: 10px;
+    row-gap: 10px; */
+
+    gap: 15px 15px;
+
+    /* justify-items: center;
+    align-items: center; */
+
+    /* shorthand */
+
+    place-items: stretch stretch; /* align justify */
+
+    /* Needs available space to move around fr takes up available space. */
+    /* Positions column-wise */
+
+    justify-content: space-between;
+    align-content: space-evenly;
+    /* short hand */
+    place-content : stretch stretch;
+}
+
+[class*="footer"] {
+    border: 1px solid #333;
+    grid-column-start: 1;
+    grid-column-start: span 3;
+    place-self: stretch stretch;
+}
+
+
+
